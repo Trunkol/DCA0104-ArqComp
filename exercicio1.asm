@@ -40,7 +40,26 @@ main:
 	syscall
 
 .data
-	msg1: .asciiz "\n digite A: "
-	msg2: .asciiz "\n digite B: "
-	msg3: .asciiz "\n A + B = "
+	msg1: .asciiz "\n digite base de A1: "
+	msg2: .asciiz "\n digite altura de A1: "
 	
+	msg3: .asciiz "\n digite base de A2: "
+	msg4: .asciiz "\n digite altura de A2: "
+
+	msg5: .asciiz "\n digite base de A3: "
+	msg6: .asciiz "\n digite altura de A3: "
+
+	msg7: .asciiz "\n digite base de A4: "
+	msg8: .asciiz "\n digite altura de A4: "
+	
+	msg9: .asciiz "\n digite base de A5: "
+	msg10: .asciiz "\n digite altura de A5: "
+
+	msg11: .asciiz "\n digite base de A6: "
+	msg12: .asciiz "\n digite altura de A6: "
+
+	msg13: .asciiz "\n digite base de A7: "
+	msg14: .asciiz "\n digite altura de A7: "
+	
+	msg15: .asciiz "\n digite base de A8: "
+	msg16: .asciiz "\n digite altura de A8: "
