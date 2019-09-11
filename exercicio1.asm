@@ -7,22 +7,23 @@ main:
 	##################################################
 	###	Primeira area
 	##################################################
-	#Impressão de mensagem 1 no console
+	
+	#Impressão da mensagem que solicita base
 	addi $v0, $zero, 4
 	la $a0, msg1
 	syscall
 	
-	#Leitura de dados 
+	#Leitura do valor digitado
 	addi $v0, $zero, 5
 	syscall
 	add $t0, $v0, $zero
 	
-	#Impressão de mensagem 1 no console
+	#Impressão da mensagem que solicita a altura
 	addi $v0, $zero, 4
 	la $a0, msg2
 	syscall
 	
-	#Leitura de dados 
+	#Leitura de dados da altura digitada
 	addi $v0, $zero, 5
 	syscall
 	add $t1, $v0, $zero
@@ -158,7 +159,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg9
+	la $a0, msg11
 	syscall
 	
 	#Leitura de dados 
@@ -168,7 +169,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg10
+	la $a0, msg12
 	syscall
 	
 	#Leitura de dados 
@@ -188,7 +189,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg9
+	la $a0, msg13
 	syscall
 	
 	#Leitura de dados 
@@ -198,7 +199,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg10
+	la $a0, msg14
 	syscall
 	
 	#Leitura de dados 
@@ -218,7 +219,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg9
+	la $a0, msg15
 	syscall
 	
 	#Leitura de dados 
@@ -228,7 +229,7 @@ main:
 	
 	#Impressão de mensagem 1 no console
 	addi $v0, $zero, 4
-	la $a0, msg10
+	la $a0, msg16
 	syscall
 	
 	#Leitura de dados 
@@ -240,17 +241,6 @@ main:
 	mflo $s1		
 
 	sub $s2, $s2, $s1
-	
-	#Impressão de mensagem 1 no console
-	addi $v0, $zero, 4
-	la $a0, msg17
-	syscall
-	
-	#Leitura de dados 
-	addi $v0, $zero, 5
-	syscall
-	add $s2, $v0, $zero
-			
 .data
 	msg1: .asciiz "\n digite base de A1: "
 	msg2: .asciiz "\n digite altura de A1: "
