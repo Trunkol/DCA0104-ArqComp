@@ -93,7 +93,7 @@ main:
 	
 	
 	##################################################
-	###	Terceira area
+	###	Quarta area
 	##################################################
 	
 	#Impressão de mensagem 1 no console
@@ -123,7 +123,7 @@ main:
 	
 	
 	##################################################
-	###	Terceira area
+	###	Quinta area
 	##################################################
 	
 	#Impressão de mensagem 1 no console
@@ -150,7 +150,107 @@ main:
 	mflo $s1		
 
 	add $s2, $s2, $s1
+
 	
+	##################################################
+	###	sexta area
+	##################################################
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg9
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t0, $v0, $zero
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg10
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t1, $v0, $zero
+	
+	mult $t0, $t1
+	mflo $s1		
+
+	add $s2, $s2, $s1
+
+	
+	##################################################
+	###	Sétima area
+	##################################################
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg9
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t0, $v0, $zero
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg10
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t1, $v0, $zero
+	
+	mult $t0, $t1
+	mflo $s1		
+
+	add $s2, $s2, $s1
+
+	
+	##################################################
+	###	Oitava area
+	##################################################
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg9
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t0, $v0, $zero
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg10
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $t1, $v0, $zero
+	
+	mult $t0, $t1
+	mflo $s1		
+
+	sub $s2, $s2, $s1
+	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg17
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	add $s2, $v0, $zero
+			
 .data
 	msg1: .asciiz "\n digite base de A1: "
 	msg2: .asciiz "\n digite altura de A1: "
@@ -175,3 +275,5 @@ main:
 	
 	msg15: .asciiz "\n digite base de A8: "
 	msg16: .asciiz "\n digite altura de A8: "
+	
+	msg17: .asciiz "\n Area da figura total: "
