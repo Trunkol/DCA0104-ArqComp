@@ -92,7 +92,6 @@ main:
 
 	add $s2, $s2, $s1
 	
-	
 	##################################################
 	###	Quarta area
 	##################################################
@@ -240,7 +239,25 @@ main:
 	mult $t0, $t1
 	mflo $s1		
 
-	sub $s2, $s2, $s1
+	add $s2, $s2, $s1
+	
+	#################################################
+	##################Exibição#######################
+	
+	sub	$s2, $s2, $s1
+	
+	#Impressão da mensagem 17
+	addi $v0, $zero, 4
+	la $a0, msg17
+	syscall
+	
+	#Impressão de mensagem 3 no console
+	addi $v0, $zero, 1
+	add $s2, $s2, $s1
+	syscall
+	
+	addi $v0, $zero, $s2
+	syscall
 .data
 	msg1: .asciiz "\n digite base de A1: "
 	msg2: .asciiz "\n digite altura de A1: "
