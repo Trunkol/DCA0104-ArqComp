@@ -15,6 +15,22 @@ main:
 	
 	add $t0, $v0, $zero
 	
+	#Impressão de mensagem 1 no console
+	addi $v0, $zero, 4
+	la $a0, msg2
+	syscall
+	
+	#Leitura de dados 
+	addi $v0, $zero, 5
+	syscall
+	
+	add $t1, $v0, $zero
+	
+	mult $t0, $t1
+	
+	mflo $s1
+
+	
 	#Impressão de mensagem 2 no console
 	addi $v0, $zero, 4
 	la $a0, msg2
